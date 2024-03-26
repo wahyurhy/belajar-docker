@@ -5,6 +5,11 @@ docker run <<nama-imagenya>>    (untuk menjalankan image agar menjadi container)
 docker run --name <<nama-yang-kita-inginkan>> <<image-yang-kita-ingin-pakai-menjadi-container>>
 contoh:
 docker run --name hello1 hello-world
+
 docker images                   (untuk melihat daftar dari images yang sudah tersimpan)
 docker ps                       (untuk melihat daftar dari container yang SEDANG di run)
 docker ps -a                    (untuk melihat daftar dari semua container yang tersimpan)
+docker container rm <<ID-Container-or-NAME-Container>> (untuk melakukan Remove container)
+docker image rm <<ID-dari-image-or-Name-dari-image>> (untuk melakukan Remove image)
+contoh:
+docker image rm hello-world
