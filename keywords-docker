@@ -1,6 +1,7 @@
 Keyword Docker
-docker --version               (untuk mengecek versi docker)
-docker pull <<nama-imagenya>>  (untuk menambil image dari docker hub>
+docker --version                (untuk mengecek versi docker)
+docker pull <<nama-imagenya>>   (untuk menambil image dari docker hub>
 docker run <<nama-imagenya>>    (untuk menjalankan image agar menjadi container)
-docker images                  (untuk melihat daftar dari images yang sudah tersimpan)
-docker ps                      (untuk melihat daftar dari container yang SEDANG di run)
+docker images                   (untuk melihat daftar dari images yang sudah tersimpan)
+docker ps                       (untuk melihat daftar dari container yang SEDANG di run)
+docker ps -a                    (untuk melihat daftar dari semua container yang tersimpan)
