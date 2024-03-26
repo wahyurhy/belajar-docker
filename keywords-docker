@@ -25,3 +25,38 @@ docker run --name nginx1 -p 8080:80 -d nginx
 docker exec -it <<nama-contaner-yang-akan-digunakan>> bash (melakukan eksekusi dari container) (-it (interactive terminal) || bash (semacam programnya))
 contoh:
 docker exec -it nginx1 bash
+
+===================== START ===============================
+=========== CONTOH DARI EXEC BASH =========================
+docker exec -it nginx1 bash
+root@22b30c1acf88:/# ls
+bin  boot  dev  docker-entrypoint.d  docker-entrypoint.sh  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@22b30c1acf88:/# cd /usr/share/nginx/html/
+root@22b30c1acf88:/usr/share/nginx/html# ls
+50x.html  index.html
+root@22b30c1acf88:/usr/share/nginx/html# cat index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+=========== CONTOH DARI EXEC BASH =========================
+===================== END ===============================
