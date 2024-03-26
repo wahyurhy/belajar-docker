@@ -60,3 +60,11 @@ Commercial support is available at
 </html>
 =========== CONTOH DARI EXEC BASH =========================
 ===================== END ===============================
+
+================ START ==============================================
+=========== CARA MERUBAH ISI TULISAN DARI FILE index.html ===========
+apt-get update
+apt-get install nano
+nano index.html (setelah berada di path yang ada file index.html-nya)
+=========== CARA MERUBAH ISI TULISAN DARI FILE index.html ===========
+================ END ==============================================
