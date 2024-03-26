@@ -13,3 +13,7 @@ docker container rm <<ID-Container-or-NAME-Container>> (untuk melakukan Remove c
 docker image rm <<ID-dari-image-or-Name-dari-image>> (untuk melakukan Remove image)
 contoh:
 docker image rm hello-world
+
+docker run -d <<nama-container>> (untuk menjalankan container di BACKGROUND dengan -d (Detached))
+contoh:
+docker run -d nginx
