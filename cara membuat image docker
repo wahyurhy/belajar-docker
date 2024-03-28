@@ -1,0 +1,16 @@
+FROM ubuntu:20.04
+LABEL maintainer="wahyurahayu82@gmail.com"
+RUN apt-get update
+CMD ["echo", "Halo dari container ..."]
+
+note: FROM itu menjadikan ubuntu sebagai base dari image
+
+dan cara untuk menjalankannya adalah dengan mengetikan command:
+docker build -t <<nama-image>> .
+contoh:
+docker build -t image-halo .
+
+note: akan dibuatkan image dari file dengan nama Dockerfile, kalau ingin menggunakan nama file yang lain, bisa menggunakan command:
+docker build -t <<nama-image>> --file <<nama-file-nya>> .
+contoh:
+docker build -t image-halo2 --file Dockerfile2
