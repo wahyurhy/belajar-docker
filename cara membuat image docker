@@ -14,3 +14,13 @@ note: akan dibuatkan image dari file dengan nama Dockerfile, kalau ingin menggun
 docker build -t <<nama-image>> --file <<nama-file-nya>> .
 contoh:
 docker build -t image-halo2 --file Dockerfile2
+
+FROM ubuntu:20.04
+LABEL maintainer="wahyurahayu82@gmail.com"
+RUN apt-get update
+WORKDIR /home/coba
+RUN echo "Halo saya dari container 3" > file3.txt
+CMD ["echo", "Halo dari container 3 ..."]
+
+note:
+WORKDIR berguna untuk ketika menjalankan perintah run dengan menggunakan -it dan diakhiri dengan bash, akan langsung masuk ke direktori yang kita inginkan dengan membuatnya terlebih dahulu.
