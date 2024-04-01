@@ -25,9 +25,9 @@ docker run --name <<nama-container-yang-akan-dibuat>> -p <<port-apa-yang-akan-di
 contoh:
 docker run --name nginx1 -p 8080:80 -d nginx
 
-docker run --name <<nama-container-yang-akan-dibuat>> -p <<port-apa-pyang-akan-dipakai>>:<<port-dari-container-yang-akan-di-mapping>> -v <<path-dari-folder-kita>>:<<path-dari-folder-yang-ada-di-container>> -d <<nama-image-yang-akan-digunakan>>
+docker run --name <<nama-container-yang-akan-dibuat>> -v <<path-dari-folder-kita>>:<<path-dari-folder-yang-ada-di-container>> -p <<port-apa-pyang-akan-dipakai>>:<<port-dari-container-yang-akan-di-mapping>> -d <<nama-image-yang-akan-digunakan>>
 contoh:
-docker run --name nginx1 -p 8080:80 -v F:/belajar-docker/html1:/usr/share/nginx/html -d nginx 
+docker run --name nginx1 -v F:/belajar-docker/html1:/usr/share/nginx/html -p 8080:80 -d nginx 
 
 docker exec -it <<nama-contaner-yang-akan-digunakan>> bash (melakukan eksekusi dari container) (-it (interactive terminal) || bash (semacam programnya))
 contoh:
