@@ -1,0 +1,6 @@
+environtment yang terdapat pada image mysql:
+1. MYSQL_ROOT_PASSWORD  => untuk melakukan set password yang digunakan oleh mysql
+2. MYSQL_ROOT_HOST      => untuk melakukan memberikan pengaturan host apa saja yang boleh konek ke database, ip mana saja yang boleh melakukan akses ke database kita
+3. MYSQL_DATABASE
+4. MYSQL_USER
+5. MYSQL_PASSWORD
