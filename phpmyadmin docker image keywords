@@ -1,0 +1,25 @@
+phpmyadmin digunakan untuk melakukan pengaturan data seperti menambahkan data, menambahkan database, menambahkan table dsb. tetapi database sebenarnya berada pada container mysql.
+environtment yang terdapat pada phpmyadmin:
+
+-e PMA_HOST      => Merujuk pada database mana atau IP mana yang akan diakses database mysqlnya
+
+sebelum melakukan perintah:
+docker run --name phpmyadmin -d -e PMA_HOST=localhost -p 8082:80 phpmyadmin
+kita perlu untuk melakukan docker network
+perintahnya:
+docker network create <<nama-networknya>>
+contoh:
+docker network create network1
+
+docker network ls                            (untuk melihat list atau daftar dari network)
+
+docker inspect --type=container mysql        (untuk mengecek IP dari container)
+dan nanti akan terlihat IP dari container itu secara default berapa
+kemudian masukan perintah berikut untuk melakukan koneksi:
+docker network connect <<nama-dari-koneksi-yang-sudah-kita-buat>> <<container-yang-ingin-kita-sambungkan>>
+contohnya:
+docker network connect network1 mysql
+setelah itu lakukan perintah ini lagi:
+docker inspect --type=container mysql
+dan kita akan mendapatkan IP dari container mysql yang sudah dikoneksikan dengan network yang kita inginkan, copy IP tersebut dan masukan ke dalam perintah utama berikut:
+docker run --name phpmyadmin -d -e PMA_HOST=172.18.0.2 -p 8082:80 phpmyadmin        (contoh IPnya 172.18.0.2)
