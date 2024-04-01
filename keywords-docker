@@ -14,6 +14,9 @@ docker image rm <<ID-dari-image-or-Name-dari-image>> (untuk melakukan Remove ima
 contoh:
 docker image rm hello-world
 
+docker container stop <<nama-container-yang-akan-dihentikan>> (untuk menghentikan container yang sedang berjalan)
+docker container stop nginx1
+
 docker run -d <<nama-container>> (untuk menjalankan container di BACKGROUND dengan -d (Detached))
 contoh:
 docker run -d nginx
