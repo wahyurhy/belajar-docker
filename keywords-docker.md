@@ -17,6 +17,8 @@ docker image rm hello-world
 docker container stop <<nama-container-yang-akan-dihentikan>> (untuk menghentikan container yang sedang berjalan)
 docker container stop nginx1
 
+docker stop $(docker ps -aq)    (untuk menghentikan semua container yang berjalan)
+
 docker run -d <<nama-container>> (untuk menjalankan container di BACKGROUND dengan -d (Detached))
 contoh:
 docker run -d nginx
