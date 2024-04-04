@@ -2,5 +2,7 @@
 perintah docker compose
 1. docker compose up -d
 2. docker compose -f <<nama-file>> up -d
+   - docker compose -f docker-compose-lain.yml up -d
 3. docker compose down
 4. docker compose -f <<nama-file>> down
+   - docker compose -f docker-compose-lain.yml down
