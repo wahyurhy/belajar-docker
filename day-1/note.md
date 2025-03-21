@@ -26,3 +26,9 @@
 ## note: harus dihentikan dulu container-nya jika masih berjalan.
 ### cara stop container yang berjalan: `docker container stop <namaContainer>`
 #### kalau mau stop lebih dari satu container yang berjalan lakukan: `docker container stop <namaContainer> <namaContainerLainnyaDipisahkanSpasi>`
+
+# membuat Dockerfile
+dalam membuat Dockerfile dapat dilakukan langkah berikut:
+1. masuk ke directory yang akan dijadikan image, dan buat file `Dockerfile` seperti contoh file yang pada folder ini. Isinya adalah script bagaimana image tersebut bekerja.
+2. ketikan `docker build --tag <namaImageYangKamuInginkan>:<tag> .`
+-  ex: `docker build --tag app-golang:1.0 .`
